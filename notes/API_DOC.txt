@@ -1,0 +1,37 @@
+schema:User
+Fields:username,email,password,phone
+
+
+===== API for creating username
+
+    url:http:127.0.0.1:8000/api/register/
+    method:POST
+    body:{
+        "username":"user name",
+        "email":"email id",
+        "password1":"password",
+        "password2":"password",
+        "phone":"phone Number",
+    }
+
+
+schema:Task
+Fields:title,description,status,created_date,owner,category,priority,is_active
+
+===== API for addinga Task
+
+     url:http:127.0.0.1:8000/api/tasks/
+     method:POST
+     body:{
+        "title":"title",
+        "description":"description",
+        "status":"status",
+        "category":"category",
+        "priority":"priority"
+     }
+     authentication:Basic
+
+==== API for listing tasks
+    url:http:127.0.0.1:8000/api/tasks/
+    method:GET
+    authentication:Basic
